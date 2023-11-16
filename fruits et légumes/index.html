@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits et Légumes</title>
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./Assets/JS/app.js" type="module"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            
+        </header>
+            <div class="topnav">
+                <a class="vente" href="#">Ventes</a>
+                <a class="new" href="#">Nouvelle vente</a>
+                <a class="legumes" href="#">légumes</a>
+                <a class="new_legume" href="#">Nouveau légume</a>
+            </div>
+       
+        <main>
+            <h1>Liste des légumes</h1>
+
+            <table class="legu">
+                <thead>
+                    <tr>
+                        <th id="Name" @click="trier">Nom</th>
+                        <th id="Variety" @click="trier">Variété</th>
+                        <th id="PrimaryColor" @click="trier">Couleur</th>
+                        <th id="LifeTime" @click="trier">Durée Conservation</th>
+                        <th id="Fresh" @click="trier">Frais</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="legume of legumos">
+                        <td>{{ legume.Name }}</td>
+                        <td>{{ legume.Variety }}</td>
+                        <td>{{ legume.PrimaryColor }}</td>
+                        <td>{{ legume.LifeTime }}</td>
+                        <td>non</td>
+                        <td class="btn">Editer . Supprimer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+
+    </div>
+   
+</body>
+</html>
